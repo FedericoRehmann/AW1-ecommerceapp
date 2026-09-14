@@ -1,67 +1,85 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-  <title>E-Ring | Inicio</title>
-</head>
-<body>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>E-Ring | Inicio</title>
+  </head>
+  <body>
     <header class="site-header">
-        <nav class="main-nav" aria-label="Navegación principal">
-            <a class="brand" href="index.html" aria-label="Ir al inicio de E-Ring">
-                <img src="img/logo/logo-e-ring.png">
-                ⚔️ E-Ring
-            </a>
-            <div class="nav-links">
-                <a class="nav-link" href="index.html" aria-current="page">Home</a>
-                <a class="nav-link" href="pages/categorias/armas.html">Armas</a>
-                <a class="nav-link" href="pages/categorias/armaduras.html">Armaduras</a>
-                <a class="nav-link" href="pages/categorias/talismanes.html">Talismanes</a>
-                <a class="nav-link" href="pages/categorias/consumibles.html">Consumibles</a>
-                <a class="nav-link" href="pages/usuarios/login.html">Iniciar sesión</a>
-                <a class="nav-link" href="pages/usuarios/registro.html">Registrarse</a>
-                <a class="nav-link logout-link" href="#">Cerrar sesión</a>
-            </div>
-        </nav>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a class="brand" href="index.html" aria-label="Ir al inicio de E-Ring">
+          <img class="brand-logo" src="img/logo-e-ring.png" alt="" />
+        </a>
+        <div class="primary-nav">
+          <a class="nav-link" href="index.html" aria-current="page">Home</a>
+          <a class="nav-link" href="pages/categorias/armas.html">Armas</a>
+          <a class="nav-link" href="pages/categorias/armaduras.html">
+            Armaduras
+          </a>
+          <a class="nav-link" href="pages/categorias/talismanes.html">
+            Talismanes
+          </a>
+          <a class="nav-link" href="pages/categorias/consumibles.html">
+            Consumibles
+          </a>
+        </div>
+        <div class="account-nav">
+          <a class="nav-link" href="pages/usuarios/login.html">
+            Iniciar sesión
+          </a>
+          <a class="nav-link" href="pages/usuarios/registro.html">
+            Registrarse
+          </a>
+          <button class="nav-link logout-link" type="button">
+            Cerrar sesión
+          </button>
+        </div>
+      </nav>
     </header>
     <main class="main-content">
-        <section class="hero-section" id="home">
-            <h1 class="page-title">E-Ring</h1>
-            <p class="page-subtitle">
-                Equipamiento digno de un Sinluz para conquistar las Tierras Intermedias.
-            </p>
-        </section>
-        <section class="categories-section" id="categories">
-            <h2 class="section-title">Explorá nuestras categorías</h2>
-            <ul class="category-list">
-                <li class="category-item">
-                    <a class="category-card" href="pages/categorias/armas.html">
-                        Armas
-                    </a>
-                </li>
-                <li class="category-item">
-                    <a class="category-card" href="pages/categorias/armaduras.html">
-                        Armaduras
-                    </a>
-                </li>
-                <li class="category-item">
-                    <a class="category-card" href="pages/categorias/talismanes.html">
-                        Talismanes
-                    </a>
-                </li>
-                <li class="category-item">
-                    <a class="category-card" href="pages/categorias/consumibles.html">
-                        Consumibles
-                    </a>
-                </li>
-            </ul>
-        </section>
+      <section class="hero-section" id="home">
+        <h1 class="page-title">E-Ring</h1>
+        <p class="page-subtitle">
+          Equipamiento digno de un Sinluz para conquistar las Tierras
+          Intermedias.
+        </p>
+      </section>
+      <section class="categories-section" id="categories">
+        <h2 class="section-title">Explorá nuestras categorías</h2>
+        <ul class="category-list">
+          <li class="category-item">
+            <a class="category-card" href="pages/categorias/armas.html">
+              Armas
+            </a>
+          </li>
+          <li class="category-item">
+            <a class="category-card" href="pages/categorias/armaduras.html">
+              Armaduras
+            </a>
+          </li>
+          <li class="category-item">
+            <a class="category-card" href="pages/categorias/talismanes.html">
+              Talismanes
+            </a>
+          </li>
+          <li class="category-item">
+            <a class="category-card" href="pages/categorias/consumibles.html">
+              Consumibles
+            </a>
+          </li>
+        </ul>
+      </section>
     </main>
     <footer class="site-footer">
-        <p>&copy; 2026 E-Ring</p>
+      <p>&copy; 2026 E-Ring</p>
     </footer>
-</body>
+  </body>
 </html>
