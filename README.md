@@ -1,5 +1,5 @@
 # E-Ring
-## Your journey. Your items. / Tu viaje. Tus Productos.
+Your journey. Your items. / Tu viaje. Tus Productos.
 
 ## Autor
 Federico Nicolas Rehmann
