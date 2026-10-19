@@ -12,34 +12,8 @@
     <link rel="stylesheet" href="../../css/style.css" />
     <title>E-Ring | Consumibles</title>
   </head>
-  <body>
-    <header class="site-header">
-      <nav class="main-nav" aria-label="Navegación principal">
-        <a
-          class="brand"
-          href="../../index.html"
-          aria-label="Ir al inicio de E-Ring"
-        >
-          <img class="brand-logo" src="../../img/logo-e-ring.png" alt="" />
-        </a>
-        <div class="primary-nav">
-          <a class="nav-link" href="../../index.html">Home</a>
-          <a class="nav-link" href="armas.html">Armas</a>
-          <a class="nav-link" href="armaduras.html">Armaduras</a>
-          <a class="nav-link" href="talismanes.html">Talismanes</a>
-          <a class="nav-link" href="consumibles.html" aria-current="page">
-            Consumibles
-          </a>
-        </div>
-        <div class="account-nav">
-          <a class="nav-link" href="../usuarios/login.html">Iniciar sesión</a>
-          <a class="nav-link" href="../usuarios/registro.html">Registrarse</a>
-          <button class="nav-link logout-link" type="button">
-            Cerrar sesión
-          </button>
-        </div>
-      </nav>
-    </header>
+  <body data-page="category" data-category="consumibles">
+    <header id="app-header"></header>
     <main class="main-content">
       <section class="hero-section">
         <h1 class="page-title">Consumibles</h1>
@@ -49,60 +23,96 @@
       </section>
       <section class="products-section">
         <h2 class="section-title">Suministros para el camino</h2>
-        <div class="product-grid">
-          <article class="product-card">
-            <div class="product-image-placeholder" aria-hidden="true">
-              Imagen de Frasco de Lágrimas Carmesíes
-            </div>
-            <div class="product-info">
-              <h3 class="product-title">Frasco de Lágrimas Carmesíes</h3>
-              <p class="product-description">
-                Restaura puntos de vida para continuar luchando en las Tierras
-                Intermedias.
-              </p>
-              <p class="product-price">2.500 runas</p>
-              <button class="product-button" type="button">
-                Agregar al carrito
-              </button>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-image-placeholder" aria-hidden="true">
-              Imagen de Hígado Encurtido Inmunizante
-            </div>
-            <div class="product-info">
-              <h3 class="product-title">Hígado Encurtido Inmunizante</h3>
-              <p class="product-description">
-                Aumenta temporalmente la inmunidad y ayuda a resistir estados
-                alterados.
-              </p>
-              <p class="product-price">1.800 runas</p>
-              <button class="product-button" type="button">
-                Agregar al carrito
-              </button>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-image-placeholder" aria-hidden="true">
-              Imagen de Grasa de Fuego
-            </div>
-            <div class="product-info">
-              <h3 class="product-title">Grasa de Fuego</h3>
-              <p class="product-description">
-                Impregna temporalmente un arma con fuego para aumentar el daño
-                de cada golpe.
-              </p>
-              <p class="product-price">3.200 runas</p>
-              <button class="product-button" type="button">
-                Agregar al carrito
-              </button>
-            </div>
-          </article>
-        </div>
+        <div class="product-grid"></div>
       </section>
     </main>
     <footer class="site-footer">
-      <p>&copy; 2026 E-Ring</p>
+      <div class="footer-content">
+        <section>
+          <a href="../../index.html" aria-label="Ir al inicio de E-Ring">
+            <img
+              class="footer-logo"
+              src="../../img/logo-e-ring.png"
+              alt="Logo de E-Ring"
+            />
+          </a>
+          <p class="footer-brand-text">
+            Tu viaje. Tus objetos. Equipamiento para conquistar las Tierras
+            Intermedias.
+          </p>
+        </section>
+        <nav aria-label="Navegación del pie de página">
+          <h2 class="footer-column-title">Explorar</h2>
+          <ul class="footer-links">
+            <li><a class="footer-link" href="../../index.html">Home</a></li>
+            <li><a class="footer-link" href="armas.html">Armas</a></li>
+            <li><a class="footer-link" href="armaduras.html">Armaduras</a></li>
+            <li>
+              <a class="footer-link" href="talismanes.html">Talismanes</a>
+            </li>
+            <li>
+              <a class="footer-link" href="consumibles.html">Consumibles</a>
+            </li>
+          </ul>
+        </nav>
+        <section>
+          <h2 class="footer-column-title">Seguinos</h2>
+          <div class="social-links">
+            <a
+              class="social-link"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram de E-Ring"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5Zm5.25-3.6a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1Z"
+                />
+              </svg>
+            </a>
+            <a
+              class="social-link"
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook de E-Ring"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M13.5 22v-8h2.75l.41-3.2H13.5V8.75c0-.93.26-1.56 1.6-1.56h1.71V4.33c-.3-.04-1.31-.13-2.49-.13-2.46 0-4.14 1.5-4.14 4.25v2.35H4.4V14h2.78v8h6.32Z"
+                />
+              </svg>
+            </a>
+            <a
+              class="social-link"
+              href="https://x.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X de E-Ring"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-7.13L5.83 22H2.7l7.24-8.28L2.3 2h6.4l4.42 6.5L18.9 2Zm-1.1 18h1.73L7.76 3.9H5.9L17.8 20Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section>
+          <h2 class="footer-column-title">Ubicación de referencia</h2>
+          <iframe
+            class="footer-map"
+            title="Mapa de Buenos Aires, Argentina"
+            src="https://www.google.com/maps?q=Buenos%20Aires,%20Argentina&z=12&output=embed"
+            loading="lazy"
+          ></iframe>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 E-Ring</p>
+      </div>
     </footer>
+    <script type="module" src="../../js/main.js"></script>
   </body>
 </html>
