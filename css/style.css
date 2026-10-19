@@ -268,6 +268,7 @@ a {
 }
 
 .product-card {
+  height: 100%;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -345,6 +346,7 @@ a {
 
 .quantity-selector {
   width: 100%;
+  margin-top: auto;
   margin-bottom: 18px;
   padding: 12px;
   background-color: #1a1a1a;
@@ -417,7 +419,6 @@ a {
 
 .product-button {
   width: 100%;
-  margin-top: auto;
 }
 
 .product-button:hover,
@@ -651,22 +652,38 @@ a {
   }
 
   .main-nav {
-    padding: 15px 0;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 15px;
+    padding: 12px 18px;
+    grid-template-areas:
+      "brand account"
+      "primary primary";
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px 18px;
   }
 
   .brand,
   .primary-nav,
   .account-nav {
-    justify-self: center;
+    justify-self: start;
+  }
+
+  .brand {
+    grid-area: brand;
   }
 
   .primary-nav,
   .account-nav {
-    justify-content: center;
     flex-wrap: wrap;
+  }
+
+  .primary-nav {
+    grid-area: primary;
+    justify-content: flex-start;
+  }
+
+  .account-nav {
+    grid-area: account;
+    justify-self: end;
+    justify-content: flex-end;
   }
 
   .category-list {
@@ -679,6 +696,27 @@ a {
 
   .footer-content {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .main-nav {
+    grid-template-areas:
+      "brand"
+      "primary"
+      "account";
+    grid-template-columns: 1fr;
+  }
+
+  .brand,
+  .primary-nav,
+  .account-nav {
+    justify-self: start;
+  }
+
+  .primary-nav,
+  .account-nav {
+    justify-content: flex-start;
   }
 }
 
