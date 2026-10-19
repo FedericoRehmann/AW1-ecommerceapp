@@ -13,7 +13,7 @@ export function createProductCard(product) {
       alt="${product.alt}"
     />
     <div class="product-info">
-      <h2 class="product-title">${product.title}</h2>
+      <h3 class="product-title">${product.title}</h3>
       <p class="product-description">
         ${product.description}
       </p>
