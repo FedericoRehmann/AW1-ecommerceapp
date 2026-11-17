@@ -1,4 +1,4 @@
-export function initializeLogout() {
+export function initializeLogout(rootPath) {
   const logoutButton = document.querySelector(".logout-link");
 
   if (!logoutButton) {
@@ -6,10 +6,6 @@ export function initializeLogout() {
   }
 
   logoutButton.addEventListener("click", () => {
-    const loginPageUrl = new URL(
-      "../../pages/usuarios/login.html",
-      import.meta.url
-    );
-    window.location.href = loginPageUrl.href;
+    window.location.href = `${rootPath}pages/usuarios/login.html`;
   });
 }

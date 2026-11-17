@@ -7,9 +7,11 @@ const currentPage = document.body.dataset.page;
 const currentCategory = document.body.dataset.category;
 const appHeader = document.querySelector("#app-header");
 
+const rootPath = currentPage === "category" ? "../../" : "";
+
 if (currentPage === "home" || currentPage === "category") {
-  renderNavbar(appHeader, currentPage, currentCategory);
-  initializeLogout();
+  renderNavbar(appHeader, currentPage, currentCategory, rootPath);
+  initializeLogout(rootPath);
 }
 
 if (currentPage === "category") {
