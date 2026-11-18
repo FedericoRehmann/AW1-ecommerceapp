@@ -1,5 +1,6 @@
 import { createCartItem } from "../components/cart-item.component.js";
 import {
+  clearCart,
   getCart,
   removeFromCart,
   updateCartItemQuantity
@@ -17,13 +18,15 @@ export function initializeCart(rootPath) {
   const cartSubtotal = document.querySelector("#cart-subtotal");
   const cartShipping = document.querySelector("#cart-shipping");
   const cartTotal = document.querySelector("#cart-total");
+  const checkoutButton = document.querySelector(".checkout-button");
 
   if (
     !cartItems ||
     !emptyCartMessage ||
     !cartSubtotal ||
     !cartShipping ||
-    !cartTotal
+    !cartTotal ||
+    !checkoutButton
   ) {
     return;
   }
@@ -37,11 +40,13 @@ export function initializeCart(rootPath) {
       cartSubtotal.textContent = formatPrice(0);
       cartShipping.textContent = formatPrice(0);
       cartTotal.textContent = formatPrice(0);
+      checkoutButton.disabled = true;
 
       return;
     }
 
     emptyCartMessage.hidden = true;
+    checkoutButton.disabled = false;
 
     const cartItemElements = cart.map((product) => {
       return createCartItem(
@@ -69,6 +74,18 @@ export function initializeCart(rootPath) {
     cartShipping.textContent = formatPrice(SHIPPING_COST);
     cartTotal.textContent = formatPrice(total);
   }
+
+  checkoutButton.addEventListener("click", () => {
+    const cart = getCart();
+
+    if (cart.length === 0) {
+      return;
+    }
+
+    clearCart();
+    window.alert("Tu compra fue realizada correctamente.");
+    renderCart();
+  });
 
   renderCart();
 }

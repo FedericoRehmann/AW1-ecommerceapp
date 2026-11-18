@@ -67,3 +67,7 @@ export function removeFromCart(productId) {
 
   saveCart(updatedCart);
 }
+
+export function clearCart() {
+  localStorage.removeItem(CART_STORAGE_KEY);
+}
