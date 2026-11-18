@@ -1,27 +1,37 @@
+import { addToCart } from "../services/cart.service.js";
+
 function formatPrice(price) {
   return `${price.toLocaleString("es-AR")} runas`;
 }
 
-export function createProductCard(product) {
+export function createProductCard(product, rootPath) {
   const card = document.createElement("article");
+  const imagePath = `${rootPath}${product.image}`;
+
   card.className = "product-card";
   card.dataset.productId = product.id;
+
   card.innerHTML = `
     <img
       class="product-image"
-      src="${product.image}"
+      src="${imagePath}"
       alt="${product.alt}"
     />
+
     <div class="product-info">
       <h3 class="product-title">${product.title}</h3>
+
       <p class="product-description">
         ${product.description}
       </p>
+
       <p class="product-price">
         ${formatPrice(product.price)}
       </p>
+
       <div class="quantity-selector">
         <span class="quantity-label">Cantidad</span>
+
         <div class="quantity-controls">
           <button
             class="quantity-button"
@@ -30,7 +40,9 @@ export function createProductCard(product) {
           >
             -
           </button>
+
           <output class="quantity-value" aria-live="polite">1</output>
+
           <button
             class="quantity-button"
             type="button"
@@ -40,14 +52,18 @@ export function createProductCard(product) {
           </button>
         </div>
       </div>
+
       <button class="product-button" type="button">
         Agregar al carrito
       </button>
     </div>
   `;
+
   const decreaseButton = card.querySelectorAll(".quantity-button")[0];
   const increaseButton = card.querySelectorAll(".quantity-button")[1];
   const quantityValue = card.querySelector(".quantity-value");
+  const addButton = card.querySelector(".product-button");
+
   let quantity = 1;
 
   function updateQuantity() {
@@ -64,6 +80,18 @@ export function createProductCard(product) {
   increaseButton.addEventListener("click", () => {
     quantity += 1;
     updateQuantity();
+  });
+
+  addButton.addEventListener("click", () => {
+    addToCart(product, quantity);
+
+    addButton.textContent = "Agregado al carrito ✓";
+    addButton.disabled = true;
+
+    setTimeout(() => {
+      addButton.textContent = "Agregar al carrito";
+      addButton.disabled = false;
+    }, 1200);
   });
 
   return card;

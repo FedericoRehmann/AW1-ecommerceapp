@@ -1,4 +1,5 @@
 import { navigationItems } from "../data/navigation.data.js";
+import { getLoggedUser } from "../services/session.service.js";
 
 function createRelativePath(rootPath, path) {
   return `${rootPath}${path}`;
@@ -20,6 +21,12 @@ export function renderNavbar(
     rootPath,
     "pages/usuarios/registro.html"
   );
+  const cartUrl = createRelativePath(
+    rootPath,
+    "pages/carrito/carrito.html"
+  );
+
+  const loggedUser = getLoggedUser();
 
   const navigationLinks = navigationItems
     .map((item) => {
@@ -41,6 +48,31 @@ export function renderNavbar(
     })
     .join("");
 
+  const cartLink = `
+    <a
+      class="nav-link"
+      href="${cartUrl}"
+      ${currentPage === "cart" ? 'aria-current="page"' : ""}
+    >
+      Carrito
+    </a>
+  `;
+
+  const accountLinks = loggedUser
+    ? `
+      ${cartLink}
+
+      <button class="nav-link logout-link" type="button">
+        Cerrar sesión
+      </button>
+    `
+    : `
+      ${cartLink}
+
+      <a class="nav-link" href="${loginUrl}">Iniciar sesión</a>
+      <a class="nav-link" href="${registerUrl}">Registrarse</a>
+    `;
+
   headerElement.className = "site-header";
 
   headerElement.innerHTML = `
@@ -54,11 +86,7 @@ export function renderNavbar(
       </div>
 
       <div class="account-nav">
-        <a class="nav-link" href="${loginUrl}">Iniciar sesión</a>
-        <a class="nav-link" href="${registerUrl}">Registrarse</a>
-        <button class="nav-link logout-link" type="button">
-          Cerrar sesión
-        </button>
+        ${accountLinks}
       </div>
     </nav>
   `;

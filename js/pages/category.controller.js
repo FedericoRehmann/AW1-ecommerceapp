@@ -1,7 +1,7 @@
-import { products } from "../data/products.data.js";
+import { getProducts } from "../api/products.api.js";
 import { createProductCard } from "../components/product-card.component.js";
 
-export function initializeCategory() {
+export async function initializeCategory(rootPath) {
   const currentCategory = document.body.dataset.category;
   const productGrid = document.querySelector(".product-grid");
 
@@ -9,15 +9,26 @@ export function initializeCategory() {
     return;
   }
 
-  const categoryProducts = products.filter((product) => {
-    return product.category === currentCategory;
-  });
+  try {
+    const products = await getProducts(rootPath);
 
-  productGrid.replaceChildren();
+    const categoryProducts = products.filter((product) => {
+      return product.category === currentCategory;
+    });
 
-  const productCards = categoryProducts.map((product) => {
-    return createProductCard(product);
-  });
+    const productCards = categoryProducts.map((product) => {
+      return createProductCard(product, rootPath);
+    });
 
-  productGrid.append(...productCards);
+    productGrid.replaceChildren(...productCards);
+  } catch (error) {
+    const errorMessage = document.createElement("p");
+
+    errorMessage.textContent =
+      "No se pudieron cargar los productos. Intentá nuevamente más tarde.";
+
+    productGrid.replaceChildren(errorMessage);
+
+    console.error(error);
+  }
 }

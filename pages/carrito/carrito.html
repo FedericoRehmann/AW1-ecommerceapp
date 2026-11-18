@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>E-Ring | Carrito</title>
+  </head>
+  <body data-page="cart">
+    <header id="app-header"></header>
+    <main class="main-content cart-page">
+      <div class="cart-layout">
+        <section class="cart-products-section" aria-labelledby="cart-title">
+          <h1 class="cart-title" id="cart-title">Tu carrito</h1>
+          <p class="cart-description">
+            Revisá tus objetos antes de continuar hacia el pago.
+          </p>
+          <p class="empty-cart-message" id="empty-cart-message" hidden>
+            Tu carrito está vacío. Explorá nuestras categorías para encontrar
+            equipamiento digno de un Sinluz.
+          </p>
+          <div class="cart-items" id="cart-items"></div>
+        </section>
+        <aside class="cart-summary" aria-labelledby="summary-title">
+          <h2 class="cart-summary-title" id="summary-title">
+            Resumen del pedido
+          </h2>
+          <dl class="cart-summary-list">
+            <div class="cart-summary-row">
+              <dt>Subtotal</dt>
+              <dd id="cart-subtotal">0 runas</dd>
+            </div>
+            <div class="cart-summary-row">
+              <dt>Envío</dt>
+              <dd id="cart-shipping">0 runas</dd>
+            </div>
+            <div class="cart-summary-total">
+              <dt>Total</dt>
+              <dd id="cart-total">0 runas</dd>
+            </div>
+          </dl>
+          <button class="checkout-button" type="button">
+            Continuar al pago
+          </button>
+        </aside>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-bottom">
+        <p>&copy; 2026 E-Ring</p>
+      </div>
+    </footer>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>
