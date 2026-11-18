@@ -1,6 +1,6 @@
 # E-Ring — Entrega Final
 
-**Autor:** Federico Rehmann  
+**Autor:** Federico Nicolas Rehmann  
 **Materia:** Aplicaciones Web 1
 
 ## Enlace al proyecto publicado
@@ -19,28 +19,28 @@ La aplicación cuenta con las categorías Armas, Armaduras, Talismanes y Consumi
 
 ## Roadmap de desarrollo
 
-| Etapa | Objetivo | Implementación realizada | Iteraciones y mejoras |
-|---|---|---|---|
-| 1. Estructura inicial | Crear la base general del ecommerce. | Se creó un repositorio público, README, Home, cuatro categorías, Login y Registro. | Se definió una estructura inicial de carpetas, archivos HTML y rutas relativas. |
-| 2. Identidad visual | Diseñar una interfaz coherente con la temática elegida. | Se incorporaron paleta oscura y dorada, logo, fuentes Cinzel y Crimson Pro, cards, formularios, footer y diseño adaptable. | Se ajustaron bordes, transiciones, imágenes, jerarquía visual y distribución de los elementos. |
-| 3. Componentes y navegación | Mejorar la mantenibilidad mediante JavaScript. | Se crearon módulos, datos de navegación, navbar reutilizable, redirecciones de Login y Logout, y componentes de cards de producto. | El navbar dejó de repetirse manualmente en cada archivo HTML y pasó a renderizarse dinámicamente. |
-| 4. Datos y carrito | Incorporar los productos definitivos y persistencia en el navegador. | Se creó un archivo JSON, se obtuvieron productos mediante Fetch API, se incorporó sessionStorage, localStorage y un carrito de compras. | Se reemplazaron datos temporales por imágenes reales, se agregó el resumen de compra, eliminación de productos y compra simulada. |
-| Finalización | Preparar el producto para su publicación y entrega. | Se implementó un navbar dinámico y responsive, menú hamburguesa, menú de perfil, animaciones, revisión final y publicación en GitHub Pages. | Se priorizó la experiencia de usuario, accesibilidad, navegación adaptable y corrección de rutas relativas. |
+| Etapa                       | Objetivo                                                             | Implementación realizada                                                                                                                    | Iteraciones y mejoras                                                                                                             |
+| --------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Estructura inicial       | Crear la base general del ecommerce.                                 | Se creó un repositorio público, README, Home, cuatro categorías, Login y Registro.                                                          | Se definió una estructura inicial de carpetas, archivos HTML y rutas relativas.                                                   |
+| 2. Identidad visual         | Diseñar una interfaz coherente con la temática elegida.              | Se incorporaron paleta oscura y dorada, logo, fuentes Cinzel y Crimson Pro, cards, formularios, footer y diseño adaptable.                  | Se ajustaron bordes, transiciones, imágenes, jerarquía visual y distribución de los elementos.                                    |
+| 3. Componentes y navegación | Mejorar la mantenibilidad mediante JavaScript.                       | Se crearon módulos, datos de navegación, navbar reutilizable, redirecciones de Login y Logout, y componentes de cards de producto.          | El navbar dejó de repetirse manualmente en cada archivo HTML y pasó a renderizarse dinámicamente.                                 |
+| 4. Datos y carrito          | Incorporar los productos definitivos y persistencia en el navegador. | Se creó un archivo JSON, se obtuvieron productos mediante Fetch API, se incorporó sessionStorage, localStorage y un carrito de compras.     | Se reemplazaron datos temporales por imágenes reales, se agregó el resumen de compra, eliminación de productos y compra simulada. |
+| Finalización                | Preparar el producto para su publicación y entrega.                  | Se implementó un navbar dinámico y responsive, menú hamburguesa, menú de perfil, animaciones, revisión final y publicación en GitHub Pages. | Se priorizó la experiencia de usuario, accesibilidad, navegación adaptable y corrección de rutas relativas.                       |
 
 ## Tecnologías utilizadas
 
-| Tecnología o herramienta | Uso dentro del proyecto |
-|---|---|
-| HTML5 | Estructura semántica de las páginas, formularios, navegación, contenido y accesibilidad. |
-| CSS3 | Diseño visual, paleta de colores, layout con Grid y Flexbox, diseño responsive, transiciones y animaciones. |
-| JavaScript | Interactividad general, manipulación del DOM, componentes reutilizables, eventos, redirecciones y lógica del carrito. |
-| JSON | Fuente de datos local para almacenar los productos definitivos del ecommerce. |
-| Fetch API | Obtención asíncrona de los productos desde `data/products.json`. |
-| sessionStorage | Almacenamiento temporal del email del usuario que inició sesión durante la sesión actual. |
-| localStorage | Persistencia del carrito de compras, cantidades de productos y datos necesarios para el resumen del pedido. |
-| Google Fonts | Incorporación de las tipografías Cinzel y Crimson Pro para reforzar la identidad visual medieval del proyecto. |
-| Git y GitHub | Control de versiones, repositorio público y seguimiento del desarrollo del proyecto. |
-| GitHub Pages | Publicación pública del sitio web final. |
+| Tecnología o herramienta | Uso dentro del proyecto                                                                                               |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| HTML5                    | Estructura semántica de las páginas, formularios, navegación, contenido y accesibilidad.                              |
+| CSS3                     | Diseño visual, paleta de colores, layout con Grid y Flexbox, diseño responsive, transiciones y animaciones.           |
+| JavaScript               | Interactividad general, manipulación del DOM, componentes reutilizables, eventos, redirecciones y lógica del carrito. |
+| JSON                     | Fuente de datos local para almacenar los productos definitivos del ecommerce.                                         |
+| Fetch API                | Obtención asíncrona de los productos desde `data/products.json`.                                                      |
+| sessionStorage           | Almacenamiento temporal del email del usuario que inició sesión durante la sesión actual.                             |
+| localStorage             | Persistencia del carrito de compras, cantidades de productos y datos necesarios para el resumen del pedido.           |
+| Google Fonts             | Incorporación de las tipografías Cinzel y Crimson Pro para reforzar la identidad visual medieval del proyecto.        |
+| Git y GitHub             | Control de versiones, repositorio público y seguimiento del desarrollo del proyecto.                                  |
+| GitHub Pages             | Publicación pública del sitio web final.                                                                              |
 
 ## Mejora significativa
 
