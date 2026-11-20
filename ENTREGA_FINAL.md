@@ -53,15 +53,11 @@ Esta mejora aporta:
 - Mejor experiencia de usuario en computadoras y dispositivos móviles.
 - Navegación adaptable mediante diseño responsive.
 - Menús con transiciones y animaciones suaves.
-- Mejor accesibilidad mediante botones, etiquetas `aria-label`, `aria-controls`, `aria-expanded` y cierre de menús con la tecla Escape.(ARIA (Accessible Rich Internet Applications) son atributos de accesibilidad, que su función es explicarles a los lectores qué hace un control y en qué estado está.)
+- Mejor accesibilidad mediante botones, etiquetas `aria-label`, `aria-controls`, `aria-expanded` y cierre de menús con la tecla Escape. (ARIA (Accessible Rich Internet Applications) son atributos de accesibilidad, que su función es explicarles a los lectores qué hace un control y en qué estado está.)
 - Reutilización del navbar desde un único componente de JavaScript.
 
 Como mejora adicional, se desarrolló un carrito de compras persistente. El usuario puede agregar productos, modificar cantidades, eliminar productos, visualizar subtotales, envío fijo, total del pedido y finalizar una compra simulada que vacía el carrito.
 
 ## Video explicativo
 
-El video de recorrido del sitio se encuentra disponible en el siguiente enlace:
-
-**Pendiente de agregar el enlace al finalizar la grabación.**
-
-El video muestra el recorrido por Home, categorías, Login, sesión, navbar responsive, productos obtenidos desde JSON, carrito de compras, modificación de cantidades, eliminación de productos y compra simulada.
+[Video Explicativo](https://youtu.be/9fAhY6JV5LI)
